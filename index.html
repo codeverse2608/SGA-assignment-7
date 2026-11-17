@@ -11,6 +11,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: "Poppins", sans-serif;
             margin: 0;
@@ -82,11 +86,73 @@
             background: #4a3565;
         }
 
+        /* ---------- Projects ---------- */
+        .projects-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            justify-content: center;
+            margin-top: 25px;
+        }
+
+        .project-card {
+            flex: 1 1 280px;
+            max-width: 340px;
+            background: #faf6ff;
+            border: 1px solid #e4d8f2;
+            border-radius: 16px;
+            padding: 25px;
+            text-align: left;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px #d5cbe0;
+        }
+
+        .project-card h3 {
+            margin: 0 0 10px;
+            color: #4a3565;
+        }
+
+        .project-card p {
+            font-size: 15px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .tags {
+            margin: 12px 0 5px;
+        }
+
+        .tags span {
+            display: inline-block;
+            background: #e9dcf7;
+            color: #4a3565;
+            font-size: 12px;
+            font-weight: 500;
+            padding: 4px 12px;
+            border-radius: 15px;
+            margin: 0 4px 6px 0;
+        }
+
         footer {
             margin-top: 50px;
             padding: 20px;
             background: #4a3565;
             color: white;
+        }
+
+        @media (max-width: 700px) {
+            .box {
+                width: 85%;
+                padding: 20px;
+            }
+
+            .intro h2 {
+                font-size: 32px;
+            }
         }
     </style>
 </head>
@@ -99,6 +165,7 @@
         <nav>
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
@@ -122,6 +189,46 @@
         <h2>My Skills</h2>
         <p>HTML • CSS • C • C++ • Python</p>
     </div>
+
+    <!-- ===== NEW: Projects section ===== -->
+    <div class="box" id="projects">
+        <h2>My Projects</h2>
+
+        <div class="projects-grid">
+
+            <!-- Project 1 -->
+            <div class="project-card">
+                <h3>CRT App</h3>
+                <p>
+                    Write a short description of your CRT app here:
+                    what it does and what problem it solves.
+                </p>
+                <div class="tags">
+                    <span>Your Tech 1</span>
+                    <span>Your Tech 2</span>
+                </div>
+                <a href="https://codeverse2608.github.io/CRT-App/"
+                   class="button" target="_blank" rel="noopener noreferrer">Open Live App</a>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card">
+                <h3>Digital IC Trainer Kit Simulator</h3>
+                <p>
+                    Write a short description of your simulator here:
+                    what it simulates and how it works.
+                </p>
+                <div class="tags">
+                    <span>Your Tech 1</span>
+                    <span>Your Tech 2</span>
+                </div>
+                <a href="https://codeverse2608.github.io/Digital-IC-Trainer-Kit---Simulator/"
+                   class="button" target="_blank" rel="noopener noreferrer">Open Simulator</a>
+            </div>
+
+        </div>
+    </div>
+    <!-- ===== END: Projects section ===== -->
 
     <div class="box" id="contact">
         <h2>Contact Me</h2>
